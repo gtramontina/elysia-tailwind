@@ -1,0 +1,4 @@
+node_modules/
+.idea/
+.devtools/3rd-party
+.devbox/

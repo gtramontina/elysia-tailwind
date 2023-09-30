@@ -1,0 +1,22 @@
+name: "🎭 Pipeline"
+
+on: push
+
+jobs:
+  lint:
+    name: "🧹 Lint"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+      - run: "bun install --ignore-scripts"
+      - run: "bun lint"
+
+  test:
+    name: "🧪 Test"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+      - run: "bun install --ignore-scripts"
+      - run: "bun test"
