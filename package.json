@@ -1,7 +1,7 @@
 {
 	"name": "elysia-tailwind",
 	"description": "Elysia Tailwind Plugin",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"homepage": "https://github.com/gtramontina/elysia-tailwind.git",
 	"license": "MIT",
 	"module": "index.ts",
@@ -17,8 +17,8 @@
 		"cssnano": "6.0.1"
 	},
 	"devDependencies": {
-		"bun-types": "1.0.3",
-		"elysia": "0.7.15",
+		"bun-types": "1.0.4",
+		"elysia": "0.7.16",
 		"@types/autoprefixer": "10.2.0"
 	},
 	"peerDependencies": {
