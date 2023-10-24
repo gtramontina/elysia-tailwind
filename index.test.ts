@@ -1,6 +1,6 @@
+import { describe, expect, it } from "bun:test";
 import Elysia from "elysia";
 import { tailwind } from "./index.ts";
-import { describe, expect, it } from "bun:test";
 
 const get = (path: string) =>
 	new Request({ method: "GET", url: `http://localhost${path}` });
