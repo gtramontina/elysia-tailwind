@@ -10,21 +10,23 @@ type Options = {
 	autoprefixer?: boolean;
 };
 
-export const tailwind = ({
-	path,
-	source,
-	config,
-	options: {
-		minify = Bun.env.NODE_ENV === "production",
-		map = Bun.env.NODE_ENV !== "production",
-		autoprefixer = true,
-	} = {},
-}: {
+export const tailwind = (settings: {
 	path: string;
 	source: string;
 	config: Config | string;
 	options?: Options;
 }) => {
+	const {
+		path,
+		source,
+		config,
+		options: {
+			minify = Bun.env.NODE_ENV === "production",
+			map = Bun.env.NODE_ENV !== "production",
+			autoprefixer = true,
+		} = {},
+	} = settings;
+
 	const result = Bun.file(source)
 		.text()
 		.then((sourceText) => {
@@ -45,8 +47,11 @@ export const tailwind = ({
 		})
 		.then(({ css }) => css);
 
-	return new Elysia({ name: "tailwind" }).get(path, async ({ set }) => {
-		set.headers["content-type"] = "text/css";
-		return result;
-	});
+	return new Elysia({ name: "tailwind", seed: settings }).get(
+		path,
+		async ({ set }) => {
+			set.headers["content-type"] = "text/css";
+			return result;
+		},
+	);
 };

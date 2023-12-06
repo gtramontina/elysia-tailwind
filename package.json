@@ -1,7 +1,7 @@
 {
 	"name": "elysia-tailwind",
 	"description": "Elysia Tailwind Plugin",
-	"version": "1.0.8",
+	"version": "1.0.9",
 	"homepage": "https://github.com/gtramontina/elysia-tailwind.git",
 	"license": "MIT",
 	"module": "index.ts",
