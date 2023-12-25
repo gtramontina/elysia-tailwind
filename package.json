@@ -17,7 +17,7 @@
 		"cssnano": "6.0.1"
 	},
 	"devDependencies": {
-		"bun-types": "1.0.15",
+		"bun-types": "1.0.20",
 		"elysia": "0.7.30",
 		"@types/autoprefixer": "10.2.0"
 	},
