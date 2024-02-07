@@ -12,7 +12,7 @@
 		"lint:fix": "bun x @biomejs/biome check --apply-unsafe --vcs-client-kind=git --vcs-enabled=true --vcs-use-ignore-file=true . *.json"
 	},
 	"dependencies": {
-		"autoprefixer": "10.4.16",
+		"autoprefixer": "10.4.17",
 		"tailwindcss": "3.4.0",
 		"cssnano": "6.0.1"
 	},
