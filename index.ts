@@ -1,5 +1,3 @@
-import autoprefixer from "autoprefixer";
-import cssnano from "cssnano";
 import Elysia from "elysia";
 import postcss from "postcss";
 import tw, { Config } from "tailwindcss";
