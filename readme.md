@@ -4,14 +4,17 @@ Elysia plugin to compile and serve Tailwind-generated stylesheets.
 
 ## Installation
 
+> [!NOTE]  
+> This package moved to a new scope. If you were using [`elysia-tailwind`](https://www.npmjs.com/package/elysia-tailwind), you should update dependency and your imports to [`@gtramontina.com/elysia-tailwind`](https://www.npmjs.com/package/@gtramontina.com/elysia-tailwind) going forward.
+
 ```bash
-bun add --exact elysia-tailwind
+bun add --exact @gtramontina.com/elysia-tailwind
 ```
 
 ## Usage
 
 ```ts
-import { tailwind } from "elysia-tailwind"; // 1. Import
+import { tailwind } from "@gtramontina.com/elysia-tailwind"; // 1. Import
 import Elysia from "elysia";
 
 new Elysia()
